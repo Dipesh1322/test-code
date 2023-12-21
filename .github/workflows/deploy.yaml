@@ -39,4 +39,3 @@ jobs:
           aws s3 cp corelib.zip s3://$AWS_S3_BUCKET/lib/
           cd ../..
           aws s3 cp ./code/ s3://$AWS_S3_BUCKET/
-          aws s3 rm .code/lib/
