@@ -38,4 +38,4 @@ jobs:
           zip -r corelib.zip ./corelib 
           aws s3 cp corelib.zip s3://$AWS_S3_BUCKET/lib/
           cd ../..
-          aws s3 sync ./code/ s3://$AWS_S3_BUCKET/ --exclude ./code/lib/
+          aws s3 cp ./code/(!lib/) s3://$AWS_S3_BUCKET/
