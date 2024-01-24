@@ -25,7 +25,8 @@ jobs:
 
       - name: Copy file to S3
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          SECRETS: ${{ secrets }}
+          AWS_ACCESS_KEY_ID: $SECRETS.AWS_ACCESS_KEY_ID
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY_ID }}
           AWS_DEFAULT_REGION: us-east-1
           AWS_S3_BUCKET: ${{ secrets.AWS_S3BUCKET_NAME }}
