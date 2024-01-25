@@ -1,5 +1,5 @@
 sudo apt-get update && sudo apt-get -y install awscli
-if [ $5 = "yes" ] && [ $6 = "no" ]
+if [ "$5" = "yes" ] && [ "$6" = "no" ]
 then
 	echo "$5 is yes and $6 is no!"
 	aws configure set aws_access_key_id $1
