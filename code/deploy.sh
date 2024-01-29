@@ -9,7 +9,7 @@ then
 	zip -r corelib.zip ./corelib 
 	aws s3 cp corelib.zip s3://$4/lib/
 	cd ../..
-	aws s3 sync ./code/ s3://$4/ --exclude 'lib/*'
+	aws s3 sync ./code/ s3://$4/ --exclude 'lib/*' --exclude 'deploy.sh'
 elif [ $5 == "no" ] && [ $6 == "yes" ]
 then
 	echo "$5 is no and $6 is yes!"
